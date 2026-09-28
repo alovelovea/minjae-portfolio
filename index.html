@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>박민재 | Min-jae Park Portfolio</title>
+<meta name="description" content="AI·데이터 프로젝트와 산학협력 활동을 담은 박민재의 개발 포트폴리오">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header>
+  <div class="wrap nav">
+    <div class="brand">박민재 · Min-jae Park</div>
+    <nav class="nav-links">
+      <a href="#about">소개</a>
+      <a href="#projects">프로젝트</a>
+      <a href="#" class="nav-doc-link" onclick="openDocModal('resume');return false;">이력서</a>
+      <a href="#" class="nav-doc-link" onclick="openDocModal('transcript');return false;">성적표</a>
+      <a href="#" class="nav-doc-link" onclick="openDocModal('certificate');return false;">수료증명서</a>
+      <a href="#contact">연락처</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <section class="hero">
+    <span class="eyebrow">한성대학교 컴퓨터공학부 · 빅데이터 트랙</span>
+    <h1>데이터와 코드로 문제를<br>풀어가는 <span>박민재</span>입니다.</h1>
+    <p>
+      자연어처리 기반 혐오 표현 탐지부터 컴퓨터 비전을 활용한 분리배출 자동화,
+      RAG·AI Agent 기반 학사 시스템, 백엔드 서버와 모바일 앱까지 — AI 모델링,
+      백엔드 개발, 하드웨어 연동을 아우르며 산학협력 프로젝트를 완성해왔습니다.
+    </p>
+    <div class="hero-links">
+      <a class="btn primary" href="#projects">프로젝트 보기</a>
+      <a class="btn" href="mailto:bagminjae584@gmail.com">이메일 보내기</a>
+      <a class="btn" href="https://github.com/alovelovea" target="_blank" rel="noopener">GitHub 프로필</a>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="section-head">
+      <span class="tag">About</span>
+      <h2>소개</h2>
+    </div>
+    <div class="about-grid">
+      <div class="about-card">
+        <p style="margin-top:0;color:var(--text-dim);font-size:0.95rem;">
+          딥러닝 모델 학습과 실험 설계, 서버 개발, 그리고 팀 프로젝트에서의 협업 경험을 바탕으로
+          아이디어를 실제 동작하는 서비스로 만드는 과정을 즐깁니다.
+          자연어처리(NLP)와 컴퓨터 비전(CV) 프로젝트를 직접 설계·구현했고,
+          Django 기반 백엔드 서버와 안드로이드 애플리케이션, 그리고 RAG·AI Agent 기반
+          시스템 개발 경험도 가지고 있습니다.
+        </p>
+        <div class="stack-list">
+          <span class="pill">Python</span>
+          <span class="pill">PyTorch</span>
+          <span class="pill">HuggingFace</span>
+          <span class="pill">YOLOv11</span>
+          <span class="pill">OpenCV</span>
+          <span class="pill">Django / DRF</span>
+          <span class="pill">React</span>
+          <span class="pill">RAG / LangChain</span>
+          <span class="pill">MCP</span>
+          <span class="pill">Android</span>
+          <span class="pill">MQTT / IoT</span>
+        </div>
+        <div class="partner-strip">
+          <div class="partner-chip">🏢 <span><b>왓챠(Watcha)</b> 산학협력 — 빅데이터프로그래밍</span></div>
+          <div class="partner-chip">🏢 <span><b>GS 네오텍</b> 산학협력 — 클라우드컴퓨팅</span></div>
+        </div>
+      </div>
+      <div class="about-card">
+        <ul class="facts">
+          <li><b>소속</b> 한성대학교 컴퓨터공학부 (빅데이터 트랙)</li>
+          <li><b>이메일</b> <a href="mailto:bagminjae584@gmail.com">bagminjae584@gmail.com</a></li>
+          <li><b>GitHub</b> <a href="https://github.com/alovelovea" target="_blank" rel="noopener">github.com/alovelovea</a></li>
+          <li><b>관심 분야</b> NLP · Computer Vision · AI Agent · Backend</li>
+          <li><b>프로젝트</b> 6건 (개인 · 산학협력 · 팀 프로젝트)</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <div class="section-head">
+      <span class="tag">Projects</span>
+      <h2>프로젝트</h2>
+    </div>
+
+    <div class="project-grid">
+
+      <!-- 혐오 탐지 -->
+      <article class="project-card">
+        <div class="p-top">
+          <div>
+            <p class="p-title">한국어 혐오 표현 탐지 (KOCOH)</p>
+            <p class="p-role">빅데이터프로그래밍 산학협력 프로젝트 · 팀 "떡볶이" (팀장)</p>
+          </div>
+          <div class="p-icon">💬</div>
+        </div>
+        <p class="p-desc">
+          온라인 댓글의 혐오 표현을 댓글 단독이 아닌 <b>원문 게시글 맥락과 함께</b> 분석해
+          반어법·비꼬기 등 중의적 표현의 탐지 정확도를 높이는 연구를 진행했습니다.
+          KOCOH 데이터셋으로 베이스라인(댓글 단독)과 제안 모델(맥락+댓글)의 성능을 비교했습니다.
+          <b>왓챠(Watcha) ML팀</b>의 산업체 멘토링을 받은 산학협력 과제입니다.
+        </p>
+        <div class="metric-row">
+          <div class="metric-box">BERT F1-Score<b>0.3786 → 0.6936</b></div>
+          <div class="metric-box">RoBERTa F1-Score<b>0.3295 → 0.6420</b></div>
+        </div>
+        <div class="p-tags">
+          <span class="pill">PyTorch</span>
+          <span class="pill">HuggingFace Transformers</span>
+          <span class="pill">KLUE BERT/RoBERTa</span>
+          <span class="pill">scikit-learn</span>
+        </div>
+        <div class="p-links">
+          <a href="https://github.com/alovelovea/hatespeech-bd-project" target="_blank" rel="noopener">GitHub 저장소 ↗</a>
+        </div>
+        <p class="team-note">팀원: 박민재(팀장) · 홍태성 · 복성준 · 용승우 · 이정모 · 지도교수 이청용</p>
+      </article>
+
+      <!-- 쓰레기 탐지 -->
+      <article class="project-card">
+        <div class="p-top">
+          <div>
+            <p class="p-title">AI 기반 쓰레기 분리배출 자동화</p>
+            <p class="p-role">캡스톤 팀 프로젝트 · Computer Vision · IoT</p>
+          </div>
+          <div class="p-icon">♻️</div>
+        </div>
+        <p class="p-desc">
+          YOLOv11n 객체 탐지 모델로 캔·페트병·플라스틱·유리·종이를 실시간으로 인식하고,
+          MQTT 통신으로 NodeMCU(ESP8266)와 서보모터를 제어해 자동으로 분류함 뚜껑을 여닫는
+          하드웨어 연동 시스템을 구현했습니다. 모델 학습과 GitHub 관리를 담당했습니다.
+        </p>
+        <div class="p-tags">
+          <span class="pill">YOLOv11 (Ultralytics)</span>
+          <span class="pill">OpenCV / Albumentations</span>
+          <span class="pill">NodeMCU · MQTT</span>
+          <span class="pill">CUDA</span>
+        </div>
+        <div class="p-links">
+          <a href="https://github.com/alovelovea/capstone_yolo" target="_blank" rel="noopener">GitHub 저장소 ↗</a>
+        </div>
+        <p class="team-note">팀원: 홍태성(하드웨어) · 박소영(데이터) · 황현석(분석) · 박민재(모델·GitHub)</p>
+      </article>
+
+      <!-- AI Agent 졸업요건 분석 시스템 -->
+      <article class="project-card">
+        <div class="p-top">
+          <div>
+            <p class="p-title">AI Agent 기반 졸업 요건 분석 시스템</p>
+            <p class="p-role">클라우드컴퓨팅 산학협력 프로젝트 · 팀 "HGA"</p>
+          </div>
+        </div>
+        <p class="p-desc">
+          RAG(Retrieval-Augmented Generation), AI Agent, MCP(Model Context Protocol)를 융합해
+          한성대학교의 복잡하고 분산된 졸업 요건 문서를 지식화하고, 학생 개개인의 이수 현황에
+          맞춰 졸업 가능 여부와 부족 요건을 진단하는 시스템을 설계하고 있습니다.
+          <b>GS 네오텍</b> AI Research Engineer의 산업체 멘토링을 받고 있습니다.
+        </p>
+        <div class="p-tags">
+          <span class="pill">RAG / Vector DB</span>
+          <span class="pill">AI Agent</span>
+          <span class="pill">MCP</span>
+          <span class="pill">LLM</span>
+        </div>
+        <p class="team-note">팀원: 송승윤(팀장) · 박민재 · 정수연 · 지도교수 김성동 · 멘토 임지훈(GS네오텍)</p>
+      </article>
+
+      <!-- 비교과 포인트 앱 -->
+      <article class="project-card">
+        <div class="p-top">
+          <div>
+            <p class="p-title">비교과 활동 포인트 관리 앱</p>
+            <p class="p-role">데이터베이스 설계 팀 프로젝트</p>
+          </div>
+          <div class="p-icon">🎯</div>
+        </div>
+        <p class="p-desc">
+          대학생들의 비교과 프로그램 참여 내역과 포인트 적립·관리를 데이터베이스로 설계하고
+          구현한 팀 프로젝트입니다. 데이터 모델링부터 서비스 구조 설계까지 팀원들과 함께
+          진행했습니다.
+        </p>
+        <div class="p-tags">
+          <span class="pill">Database Design</span>
+          <span class="pill">Team Project</span>
+        </div>
+        <div class="p-links">
+          <a href="https://github.com/DBDesignTeam2/DBDesign" target="_blank" rel="noopener">GitHub 저장소 ↗</a>
+        </div>
+      </article>
+
+      <!-- 냉장고 앱 (영상, full width) -->
+      <article class="project-card full">
+        <div class="p-top">
+          <div>
+            <p class="p-title">냉장고 재료 기반 레시피 추천 앱</p>
+            <p class="p-role">개인 프로젝트 · React + Django Backend</p>
+          </div>
+          <div class="p-icon">🧊</div>
+        </div>
+        <p class="p-desc">
+          React 프론트엔드와 Django REST Framework 백엔드로 구현한 냉장고 재료 관리 서비스입니다.
+          사용자가 등록한 재료 재고를 검색·카테고리별로 관리하고, LangChain + OpenAI 기반으로
+          맞춤 레시피를 추천하며, 알러지 정보를 반영해 안전한 식재료만 필터링합니다.
+          쇼핑 화면에서 부족한 재료를 장바구니에 담아 구매하면 재고가 자동으로 갱신되고,
+          레시피를 선택하면 재료·조리법이 담긴 상세 모달을 확인할 수 있습니다.
+          아래 데모 영상에서 재료 관리 → 쇼핑 → 레시피 확인까지 전체 흐름을 볼 수 있습니다.
+        </p>
+        <div class="shot-frame"><video controls preload="metadata" poster="images/fridge-app-poster.jpg" src="media/fridge-app-demo.mp4"></video></div>
+        <div class="p-tags">
+          <span class="pill">React</span>
+          <span class="pill">Django / DRF</span>
+          <span class="pill">LangChain + OpenAI</span>
+          <span class="pill">SQLite3</span>
+        </div>
+        <div class="p-links">
+          <a href="https://github.com/alovelovea/finalrepo" target="_blank" rel="noopener">GitHub 저장소 ↗</a>
+        </div>
+      </article>
+
+      <!-- 운동 기록 앱 (영상, full width) -->
+      <article class="project-card full">
+        <div class="p-top">
+          <div>
+            <p class="p-title">운동 기록 앱</p>
+            <p class="p-role">모바일 프로그래밍 프로젝트 · Android</p>
+          </div>
+          <div class="p-icon">🏃</div>
+        </div>
+        <p class="p-desc">
+          안드로이드 기반으로 개발한 운동 기록 애플리케이션으로, 사용자가 운동 종목과
+          기록을 입력하고 관리할 수 있는 기능을 구현했습니다. 아래 데모 영상에서 실제
+          동작 화면을 확인할 수 있습니다.
+        </p>
+        <a class="link-out-card" href="https://www.youtube.com/watch?v=bCU2SRl5KwA" target="_blank" rel="noopener">
+          <span class="link-out-icon">▶</span>
+          <span class="link-out-text">
+            <strong>YouTube에서 데모 영상 보기</strong>
+            <span>운동 기록 앱 실행 화면 · 새 탭에서 열림 ↗</span>
+          </span>
+        </a>
+      </article>
+
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="section-head">
+      <span class="tag">Contact</span>
+      <h2>연락처</h2>
+    </div>
+    <div class="about-card" style="display:flex;flex-wrap:wrap;gap:24px;justify-content:space-between;align-items:center;">
+      <p style="margin:0;color:var(--text-dim);font-size:0.95rem;">
+        새로운 프로젝트나 협업 제안은 언제든 환영합니다. 아래 채널로 편하게 연락해주세요.
+      </p>
+      <div class="hero-links">
+        <a class="btn primary" href="mailto:bagminjae584@gmail.com">bagminjae584@gmail.com</a>
+        <a class="btn" href="https://github.com/alovelovea" target="_blank" rel="noopener">GitHub</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="wrap">
+  <span>© 2026 박민재. All rights reserved.</span>
+  <span class="links">
+    <a href="https://github.com/alovelovea" target="_blank" rel="noopener">GitHub</a>
+    <a href="mailto:bagminjae584@gmail.com">Email</a>
+  </span>
+</footer>
+
+
+<div id="project-modal-overlay" class="project-modal-overlay" hidden>
+  <button class="doc-modal-close" onclick="closeProjectModal()" aria-label="닫기">✕</button>
+  <div id="project-modal-content" class="project-modal-content"></div>
+</div>
+
+<div id="doc-modal-resume" class="doc-modal-overlay" hidden>
+  <button class="doc-modal-close" onclick="closeDocModal('resume')" aria-label="닫기">✕</button>
+  <div class="doc-modal-inner">
+    <img src="images/resume.png" alt="이력서">
+  </div>
+</div>
+<div id="doc-modal-transcript" class="doc-modal-overlay" hidden>
+  <button class="doc-modal-close" onclick="closeDocModal('transcript')" aria-label="닫기">✕</button>
+  <div class="doc-modal-inner">
+    <img src="images/transcript.png" alt="성적표">
+  </div>
+</div>
+<div id="doc-modal-certificate" class="doc-modal-overlay" hidden>
+  <button class="doc-modal-close" onclick="closeDocModal('certificate')" aria-label="닫기">✕</button>
+  <div class="doc-modal-inner">
+    <img src="images/certificate.png" alt="수료증명서">
+  </div>
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>
